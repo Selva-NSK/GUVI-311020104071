@@ -24,7 +24,7 @@ $(document).ready(function () {
           headers: {
               'Access-Control-Allow-Origin': '*'
            },
-          data:{email:eml,password:pwd,fname:fn,lname:ln,phone:phn,gender:output},
+          data:{infile:'true',email:eml,password:pwd,fname:fn,lname:ln,phone:phn,gender:output},
           success: function(response) { 
             console.log(response);
             if(response=='success'){
@@ -32,7 +32,7 @@ $(document).ready(function () {
               const now = new Date()
               const item = {
                 id: eml,
-                expiry: now.getTime() + 60*1000,
+                expiry: now.getTime() + 5*60*1000,
               }
               localStorage.setItem('info', JSON.stringify(item))
               window.location='profile.html'
