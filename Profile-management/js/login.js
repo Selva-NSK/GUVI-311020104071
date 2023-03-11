@@ -23,8 +23,7 @@ $(document).ready(function () {
         data:{email:eml,password:pwd},
         success: function(response) { 
           if(response=='register'){
-            alert("You have not registered!!");
-            window.location='register.html'
+            $("#un").text("No user Name found");
           }
           else if(response=='verified'){
             const now = new Date()
@@ -35,11 +34,14 @@ $(document).ready(function () {
             localStorage.setItem('info', JSON.stringify(item))
             window.location='profile.html'
           }
-          else{
-            $("#login_label").text("Incorrect password");
+          else if(response=='pwd'){
+            $("#pwd").text("Incorrect password");
           }
+          else alert(response);
         }
       });
       event.preventDefault();
     });
   });
+
+console.log("js connected");
