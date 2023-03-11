@@ -7,18 +7,29 @@
     <title>Login</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="js/login.js"></script>
-</head>
-<body>
-    <div id="login_form">
-        <h1>LOGIN FORM</h1>
-        <p id="login_label"></p>
-        <form>
-         <input type="text" name="emailid" id="emailid" placeholder="Enter Email">
-         <br>
-         <input type="password" name="password" id="password" placeholder="***********">
-         <br>
-         <input type="submit" name="login" value="LOGIN" id="login_button">
-        </form>
-       </div>
-</body>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+ <body>
+   <div class="container">
+     <div class="wrapper">
+       <div class="title"><span>Login Form</span></div>
+       <form action="#">
+         <div class="row">
+           <i class="fas fa-user"></i>
+          	<input type="email" name="emailid" id="emailid" placeholder="Enter Email" required>
+         </div>
+         <p  id="un"></p>
+         <div class="row">
+           <i class="fas fa-lock"></i>
+           <input type="password" name="password" id="password" placeholder="Enter Password" required>
+         </div>
+         <p  id="pwd"></p>
+         <!-- <div class="pass"><a href="#">Forgot password?</a></div> -->
+         <div class="row button">
+           <input type="submit" name="login" id="login_button" value="Login";>
+         </div>
+         <div class="signup-link">Not a member? <a href="register.html">Signup now</a></div>
+       </form>
+     </div>
+    </div>
+ </body>
 </html>
