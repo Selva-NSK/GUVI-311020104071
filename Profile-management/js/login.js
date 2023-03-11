@@ -13,6 +13,8 @@ $(document).ready(function () {
     $("form").submit(function (event) {
        eml= $("#emailid").val(),
        pwd= $("#password").val(),
+       $("#un").text("");
+       $("#pwd").text("");
       // alert(eml+" "+pwd);
       $.ajax({
         url:'php/login.php',
@@ -29,7 +31,7 @@ $(document).ready(function () {
             const now = new Date()
             const item = {
               id: eml,
-              expiry: now.getTime() + 60*1000,
+              expiry: now.getTime() + 5*60*1000,
             }
             localStorage.setItem('info', JSON.stringify(item))
             window.location='profile.html'
