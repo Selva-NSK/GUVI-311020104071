@@ -1,23 +1,17 @@
-/* Profile tab styles */
 .profile-tab label {
   font-weight: 600;
 }
-
-/* Profile container styles */
 .emp-profile {
   padding: 3%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 0.5rem;
-  background: linear-gradient(45deg, #74ebd5, #9face6, #fec5bb, #fffaa3, #fad0c4, #74ebd5);
-  background-size: 600% 600%;
-  -webkit-animation: GradientBackground 10s ease infinite;
-  -moz-animation: GradientBackground 10s ease infinite;
-  animation: GradientBackground 10s ease infinite;
+  background: linear-gradient(to bottom, #f5f5f5, #e5f3ff, #f0f8ff, #e5f3ff, #f5f5f5);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  animation: color-shift 15s ease-in-out infinite;
 }
 
-/* Gradient animation */
-@-webkit-keyframes GradientBackground {
+@keyframes color-shift {
   0% {
     background-position: 0% 50%;
   }
@@ -29,35 +23,16 @@
   }
 }
 
-@-moz-keyframes GradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-@keyframes GradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-/* Profile header styles */
 .profile-head {
   width: 100%;
   border-radius: 0.5rem;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-head h5 {
@@ -70,6 +45,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .profile-head ul li {
@@ -77,7 +55,7 @@
   font-weight: 600;
   text-transform: uppercase;
   margin-right: 20px;
-  display: inline-block;
+  margin-bottom: 10px;
   cursor: pointer;
   color: #333;
 }
@@ -87,7 +65,6 @@
   color: #333;
 }
 
-/* Profile tab styles */
 .profile-tab {
   margin-top: 20px;
 }
@@ -103,7 +80,6 @@
   color: #333;
 }
 
-/* Button styles */
 #btn {
   background-color: #f44336;
   color: white;
@@ -111,31 +87,26 @@
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  float: right;
   margin-top: 10px;
   margin-right: 20px;
+  align-self: flex-end;
 }
 
 #btn:hover {
   background-color: #d6392f;
 }
 
-/* Media queries */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .emp-profile {
     padding: 2%;
   }
 }
 
-@media (max-width: 768px) {
-  .profile-head {
-    margin-bottom: 20px;
-  }
-}
-
 @media (max-width: 576px) {
   .emp-profile {
-    padding: 1%;
+    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
   }
 
   .profile-head h5 {
@@ -145,4 +116,20 @@
 
   .profile-head ul li {
     font-size: 16px;
+    margin-right: 10px;
+    margin-bottom: 5px;
   }
+
+  .profile-tab label {
+    font-size: 16px;
+  }
+
+  .profile-tab p {
+    font-size: 14px;
+  }
+
+  #btn {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+}
