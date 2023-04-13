@@ -7,7 +7,7 @@ To access my website, please follow these steps:
 2.Install XAMPP
 3.Install MongoDB
 4.Configure MySQL and XAMPP by referring to online tutorials or videos
-5.Create a database named "profile_management" and a table named "login" in MySQL
+5.Create a database named "profile_management" and a table named "login" in MySQL.With uname and password as columns 
 6.Create a database named "database" and a table named "info" in MongoDB
 7.Run MySQL server
 8.Save the "profile_management" folder as "pm" in the "htdocs" directory of XAMPP
